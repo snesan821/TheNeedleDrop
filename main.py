@@ -32,7 +32,7 @@ def home():
 def scout_artist(artist_name: str):
     try:
         # --- DISC SCOUTING ---
-        print(f"🕵️  Scouting {artist_name}...")
+        print(f"Scouting {artist_name}...")
         results = d_client.search(artist_name, type='artist')
         if not results:
             return {"error": "Artist not found"}
@@ -45,7 +45,7 @@ def scout_artist(artist_name: str):
             market_data.append(f"Title: {r.title}, Year: {r.year}, ID: {r.id}")
         
         # --- AI ANALYSIS ---
-        print("🧠  Analyzing with Gemini...")
+        print("Analyzing with Gemini...")
         prompt = f"""
         Act as a cynical music critic and vinyl investor.
         Review these 5 releases by {artist.name}:
